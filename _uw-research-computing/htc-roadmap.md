@@ -99,11 +99,21 @@ Conda environments: It is possible to install software using miniconda.
 
 
 <details>
-<summary>Learn to run HTCondor jobs</summary>
+<summary>Prepare and Run one Test Job</summary>
 <br>
+Once your data and software are ready, up next is preparing an HTCondor submit file for one test job for your analysis. 
+<br>
+   <br>
+It is important to run test jobs to make sure that your jobs are running as expected and producing the correct output. Additionally, many users are unsure of the amount of resources (memory, disk, number of cpus/gpus, maximum runtime limits) to request for their jobs; thus looking at the outputs of the `.log` file created at the end of jobs is very helpful for estimating future resource requests. By running a small amount of test jobs, it allows quicker troubleshooting and ensures your user priority is not lowered due to a large number of jobs going on hold for preventable reasons. 
+<br> 
+   <br>
+While running your test jobs, make sure that your <code>/home</code> and <code>/staging</code> quotas are sufficient for when you are ready to scale out your analsys and make sure you like your organizatinoal system for the input/output files. Many users implement HTCondor features such as <code>initialdir</code> or <code>transfer_output_remaps</code> to help them save output results into specific "results" folders to make finding important files easier. 
+<br>   
+</details>
 
-
-
+<details>
+<summary>Submit Many Jobs by Adjusting your Submit File</summary>
+<br> 
 
 
 
